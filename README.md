@@ -1,14 +1,31 @@
 # NAME
 
-Devel::KYTProf::Config - It's new $module
+Devel::KYTProf::Config - use Devel::KYTProf and add profile by yaml config file.
 
 # SYNOPSIS
 
-    use Devel::KYTProf::Config;
+    perl -MDevel::KYTProf::Config ...
 
 # DESCRIPTION
 
-Devel::KYTProf::Config is ...
+Devel::KYTProf::Config is adding [Devel::KYTProf](http://search.cpan.org/perldoc?Devel::KYTProf) profile by yaml config file.
+
+When Devel::KYTProf::Config is imported, start to search .kytprof.yaml.
+If you want to add specific module method to [Devel::KYTProf](http://search.cpan.org/perldoc?Devel::KYTProf) profile, write to
+.kytprof.yaml like this.
+
+    ---
+    "Text::Xslate"
+        - render
+
+Also you can add all methods of module to profile like this.
+
+    ---
+    "Text::Xslate" : ":all"
+
+# SEE ALSO
+
+[Devel::KYTProf](http://search.cpan.org/perldoc?Devel::KYTProf)
 
 # LICENSE
 
