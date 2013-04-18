@@ -3,6 +3,8 @@ on test => sub {
 };
 
 on configure => sub {
+    requires 'YAML';
+    requires 'Devel::KYTProf';
 };
 
 on 'develop' => sub {
