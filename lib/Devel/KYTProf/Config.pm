@@ -34,7 +34,9 @@ sub find_yaml {
     my $dir = getcwd();
     my $file_name = $ENV{"DEVEL_KYTPROF_CONFIG"} || ".kytprof.yaml";
 
-    while ( -d $dir && $dir ne "/" ) {
+    my %seen;
+    while ( -d $dir ) {
+        return undef if $seen{$dir}++; # for symlink
         if ( -f "$dir/$file_name" ) {
             return "$dir/$file_name";
         }
