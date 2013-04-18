@@ -54,5 +54,16 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/soh335/Devel-KYTProf-Config/issues"
+      },
+      "homepage" : "https://github.com/soh335/Devel-KYTProf-Config",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/soh335/Devel-KYTProf-Config.git",
+         "web" : "https://github.com/soh335/Devel-KYTProf-Config"
+      }
+   },
    "version" : "0.01"
 }
